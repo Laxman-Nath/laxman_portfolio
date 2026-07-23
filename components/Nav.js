@@ -40,27 +40,56 @@ export default function Nav() {
           Laxman Nath
         </a>
 
+        {/* Desktop inline nav - hidden on mobile */}
+        <nav className="hidden items-center gap-4 md:flex">
+          {links.map((l) => {
+            const isActive = activeId === l.href.slice(1);
+            return (
+              
+               <a key={l.href}
+                href={l.href}
+                className={`rounded-md px-3 py-2 font-mono text-xs uppercase tracking-wide transition-colors ${
+                  isActive ? 'text-signal' : 'text-paperdim hover:text-paper'
+                }`}
+              >
+                {l.label}
+              </a>
+            );
+          })}
+        </nav>
+
         <div className="flex items-center gap-2">
           <ThemeToggle />
+          
+         <a   href="/resume.pdf"
+            target="_blank"
+            rel="noopener"
+            className="hidden whitespace-nowrap rounded-md border border-ledger px-3.5 py-2 font-mono text-xs font-semibold text-paper transition-colors hover:border-signal hover:text-signal md:inline-block"
+          >
+            ↓ Resume
+          </a>
+
+          {/* Hamburger only shows on mobile */}
           <button
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((o) => !o)}
-            className="flex h-9 w-9 items-center justify-center rounded-md border border-ledger text-paper transition-colors hover:text-signal"
+            className="flex h-9 w-9 items-center justify-center rounded-md border border-ledger text-paper transition-colors hover:text-signal md:hidden"
           >
             {open ? <FiX size={18} /> : <FiMenu size={18} />}
           </button>
         </div>
       </div>
 
+      {/* Mobile dropdown - only renders below md breakpoint since button that opens it is hidden on desktop */}
       {open && (
-        <nav className="border-b border-ledger bg-void px-6 pb-6">
+        <nav className="border-b border-ledger bg-void px-6 pb-6 md:hidden">
           <div className="flex flex-col">
             {links.map((l) => {
               const isActive = activeId === l.href.slice(1);
               return (
-                <a
-                  key={l.href}
+                
+              <a    key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
                   className={`border-b border-ledgersoft py-4 font-mono text-sm uppercase tracking-wide last:border-none ${
@@ -75,7 +104,7 @@ export default function Nav() {
 
           <div className="mt-4 border-t border-ledger pt-4">
             
-            <a  href="/resume.pdf"
+           <a   href="/resume.pdf"
               target="_blank"
               rel="noopener"
               className="inline-block font-mono text-xs uppercase tracking-widest text-fog hover:text-paper"
