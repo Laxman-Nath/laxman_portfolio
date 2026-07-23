@@ -1,10 +1,46 @@
 import ScrollRevealInit from '@/components/ScrollRevealnit';
 import './globals.css';
 import BackToTop from '@/components/BackToTop';
+import PersonSchema from '@/components/PersonSchema';
 
 export const metadata = {
-  title: 'Laxman Nath — Fullstack Developer',
-  description: 'Backend-focused fullstack developer. Java, Spring Boot, Node.js, React.',
+  metadataBase: new URL('https://laxmannath.com.np'), 
+  title: {
+    default: 'Laxman Nath — Fullstack Developer',
+    template: '%s | Laxman Nath',
+  },
+  description:
+    'Backend-focused fullstack developer specializing in Java, Spring Boot, Node.js, and React. Based in Kathmandu, Nepal.',
+  keywords: [
+    'Laxman Nath',
+    'Fullstack Developer',
+    'Backend Developer',
+    'Java Developer',
+    'Spring Boot',
+    'Node.js Developer',
+    'React Developer',
+    'Kathmandu Nepal Developer',
+  ],
+  authors: [{ name: 'Laxman Nath' }],
+  creator: 'Laxman Nath',
+  openGraph: {
+    title: 'Laxman Nath — Fullstack Developer',
+    description: 'Backend-focused fullstack developer specializing in Java, Spring Boot, Node.js, and React.',
+    url: 'https://your-domain.vercel.app',
+    siteName: 'Laxman Nath',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Laxman Nath — Fullstack Developer',
+    description: 'Backend-focused fullstack developer specializing in Java, Spring Boot, Node.js, and React.',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -19,6 +55,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="font-sans antialiased">
+         <PersonSchema />
         <ScrollRevealInit />
         <BackToTop />
         {children}
