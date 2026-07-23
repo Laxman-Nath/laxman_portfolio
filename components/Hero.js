@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
@@ -6,9 +7,15 @@ export default function Hero() {
       <div className="bg-grid pointer-events-none absolute inset-0 z-0" />
 
       <div className="relative z-10 mx-auto max-w-[1080px] px-6">
-        <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-signal/40 to-flare/40 p-[2px]">
-          <div className="flex h-full w-full items-center justify-center rounded-2xl bg-panel font-mono text-2xl font-bold text-paper">
-            LN
+        <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-signal via-flare to-signal p-[2px]">
+          <div className="relative h-full w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/profile_photo.png"
+              alt="Laxman Nath"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
 
@@ -24,15 +31,16 @@ export default function Hero() {
           Fullstack Developer
         </h2>
         <p className="mb-8 max-w-lg text-paperdim">
-          Backend-focused engineer building REST APIs and web apps with Java, Spring Boot, and Node.js.
+          Backend-focused engineer building REST APIs and web apps with Java,
+          Spring Boot, and Node.js.
         </p>
 
         <div className="mb-8 flex items-center gap-4">
-          
-         <a   href="https://linkedin.com/in/laxman-nath"
+          <a
+            href="https://www.linkedin.com/in/laxman-nath-981630275/"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg border border-white/10 p-3 text-fog transition-all hover:border-signal hover:text-paper hover:bg-white/5"
+            className="rounded-full border border-white/10 p-3 text-fog transition-all hover:border-signal hover:text-paper hover:bg-white/5"
             aria-label="LinkedIn"
           >
             <FaLinkedin className="h-5 w-5" />
@@ -42,7 +50,7 @@ export default function Hero() {
             href="https://github.com/Laxman-Nath"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg border border-white/10 p-3 text-fog transition-all hover:border-signal hover:text-paper hover:bg-white/5"
+            className="rounded-full border border-white/10 p-3 text-fog transition-all hover:border-signal hover:text-paper hover:bg-white/5"
             aria-label="GitHub"
           >
             <FaGithub className="h-5 w-5" />
@@ -50,7 +58,7 @@ export default function Hero() {
 
           <a
             href="mailto:nathlaxman242@gmail.com"
-            className="rounded-lg border border-white/10 p-3 text-fog transition-all hover:border-signal hover:text-paper hover:bg-white/5"
+            className="rounded-full border border-white/10 p-3 text-fog transition-all hover:border-signal hover:text-paper hover:bg-white/5"
             aria-label="Email"
           >
             <FaEnvelope className="h-5 w-5" />
