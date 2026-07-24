@@ -1,4 +1,4 @@
-import BigHeading from './BigHeading';
+import BigHeading from '../common/BigHeading';
 
 const stats = [
   { value: '2+', label: 'Years of Experience', note: 'Building real-world applications' },
@@ -9,7 +9,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="border-t border-ledger py-16 md:py-24">
+    <section id="about" className="reveal in-view border-t border-ledger py-16 md:py-24">
       <div className="mx-auto max-w-[1080px] px-6">
         <BigHeading title="Profile" subtitle="Who I am & what I do" />
 

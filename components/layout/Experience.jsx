@@ -1,4 +1,4 @@
-import BigHeading from './BigHeading';
+import BigHeading from '../common/BigHeading';
 
 const jobs = [
   {
@@ -26,7 +26,7 @@ const jobs = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="border-t border-ledger py-16 md:py-24">
+    <section id="experience" className="reveal in-view border-t border-ledger py-16 md:py-24">
       <div className="mx-auto max-w-[1080px] px-6">
         <BigHeading title="Experience" />
 

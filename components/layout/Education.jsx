@@ -1,4 +1,4 @@
-import BigHeading from './BigHeading';
+import BigHeading from '../common/BigHeading';
 
 const education = [
   {
@@ -19,7 +19,7 @@ const education = [
 
 export default function Education() {
   return (
-    <section id="education" className="border-t border-ledger py-16 md:py-24">
+    <section id="education" className="reveal in-view border-t border-ledger py-16 md:py-24">
       <div className="mx-auto max-w-[1080px] px-6">
         <BigHeading
           title="Education"

@@ -1,4 +1,4 @@
-import BigHeading from './BigHeading';
+import BigHeading from '../common/BigHeading';
 import { FaJava, FaGitAlt, FaDocker, FaCode } from 'react-icons/fa';
 import {
   SiSpringboot, SiJavascript, SiTypescript, SiReact, SiNextdotjs,
@@ -27,7 +27,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="reveal border-t border-ledger py-16 md:py-24">
+    <section id="skills" className="reveal in-view border-t border-ledger py-16 md:py-24">
       <div className="mx-auto max-w-[1080px] px-6">
         <BigHeading
           title="Technical Skills"

@@ -1,7 +1,7 @@
-import ScrollRevealInit from '@/components/ScrollRevealnit';
+import ScrollRevealInit from '@/components/common/ScrollRevealnit';
 import './globals.css';
-import BackToTop from '@/components/BackToTop';
 import PersonSchema from '@/components/PersonSchema';
+import BackToTop from '@/components/layout/BackToTop';
 
 export const metadata = {
   metadataBase: new URL('https://laxmannath.com.np'), 

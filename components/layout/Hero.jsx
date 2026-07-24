@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden py-16 md:py-24">
+    <section id="home" className="reveal in-view relative overflow-hidden py-16 md:py-24">
       <div className="bg-grid pointer-events-none absolute inset-0 z-0" />
 
       <div className="relative z-10 mx-auto max-w-[1080px] px-6">

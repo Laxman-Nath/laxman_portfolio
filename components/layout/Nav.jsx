@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../common/ThemeToggle";
 
 const links = [
   { href: "#about", label: "Profile" },

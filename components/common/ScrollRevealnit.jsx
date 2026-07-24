@@ -20,21 +20,12 @@ export default function ScrollRevealInit() {
           }
         });
       },
-      { threshold: 0.05, rootMargin: '0px 0px -10% 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -10% 0px' }
     );
 
     els.forEach((el) => io.observe(el));
 
-    const fallback = setTimeout(() => {
-      document.querySelectorAll('.reveal:not(.in-view)').forEach((el) => {
-        el.classList.add('in-view');
-      });
-    }, 1500);
-
-    return () => {
-      io.disconnect();
-      clearTimeout(fallback);
-    };
+    return () => io.disconnect();
   }, []);
 
   return null;

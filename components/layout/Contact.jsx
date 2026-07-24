@@ -6,7 +6,7 @@ const socials = [
 
 export default function Contact() {
   return (
-    <footer id="contact" className="border-t border-ledger py-16 md:py-24">
+    <footer id="contact" className="reveal in-view border-t border-ledger py-16 md:py-24">
       <div className="mx-auto max-w-[1080px] px-6">
         <h2 className="mb-8 font-mono text-[clamp(32px,7vw,56px)] font-bold uppercase leading-[1.05] text-paper">
           Let&apos;s build
